@@ -1,16 +1,19 @@
-body {
+/*body {
     font-family: monospace;
 }
+
 ul{
     font-family: Helvetica;
+
 }
-li {
+
+li{
 
 list-style: circle;
 
 }
 
-.list {
+.list{
 
 list-style: square;
 
@@ -21,17 +24,94 @@ list-style: square;
 font-family: monospace;
 
 }
-.light-theme {
 
- --bg:var(--green);
-    --fontcolor:var(--black);
+.light-theme{
+
+ --bg: var(--green);
+    --fontcolor: var(--black);
+
+}
 
 .dark-theme{
-    --bg:var(--black);
-    --fontcolor:var(--green);
+    --bg: var(--black);
+    --fontcolor:v ar(--green);
 }
+
 :root{
     --green: #00F00;
     --white: #ffffff;
     --black: #000000;
 }
+
+*{
+    color: var(--fontcolor);
+    font-family: Helvetica;
+}
+
+body{
+    background: var(--bg);
+}*/
+
+
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Tema claro */
+.light-theme {
+    --bg: var(--green);
+    --fontcolor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/* Tema escuro */
+.dark-theme {
+    --bg: var(--black);
+    --fontcolor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* Estilos gerais */
+* {
+    color: var(--fontcolor);  /* Cor do texto */
+    font-family: Helvetica;    /* Fonte padrão */
+}
+
+body {
+    background-color: var(--bg);  /* Cor de fundo */
+    color: var(--fontcolor);      /* Cor do texto */
+    font-family: monospace;       /* Fonte para o body */
+}
+
+/* Estilos adicionais */
+ul {
+    font-family: Helvetica;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+#msg {
+    font-family: monospace;
+}
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+.btn:focus {outline-style: none;}
